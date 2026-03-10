@@ -165,9 +165,9 @@ a:hover { color: var(--accent-hl); }
 
 /* ── Hero photo — vertical rectangle ── */
 .hero-photo {
-  width: 220px;
-  height: 320px;
-  border-radius: 12px;
+  width: 300px;
+  height: 440px;
+  border-radius: 14px;
   border: 2px solid var(--border);
   overflow: hidden;
   flex-shrink: 0;
@@ -455,8 +455,8 @@ a:hover { color: var(--accent-hl); }
     gap: 2rem;
   }
   .hero-photo {
-    width: 140px;
-    height: 200px;
+    width: 180px;
+    height: 260px;
     margin-inline: auto;
   }
   .bio { max-width: 100%; }
