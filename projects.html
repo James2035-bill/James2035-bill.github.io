@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | James Ajanel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <span class="nav-logo">James Ajanel</span>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header container">
+    <h1>Projects</h1>
+    <p class="page-sub">A selection of work from my time at Stanford &mdash; spanning signal processing, systems, and more.</p>
+  </header>
+
+  <!-- ===== PROJECT GRID ===== -->
+  <main class="container projects-grid">
+
+    <!-- ── PROJECT CARD TEMPLATE ──
+         Duplicate this block for each new project.
+         Replace the placeholder values with your real content.
+    ──────────────────────────────── -->
+
+    <article class="card">
+      <div class="card-img-wrap">
+        <!-- Replace src with your actual image path, e.g. assets/dsp-filter.png -->
+        <img src="assets/placeholder.png" alt="Project image" class="card-img" />
+        <span class="card-tag">Signal Processing</span>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">DSP Filter Design</h2>
+        <p class="card-desc">
+          Designed and implemented FIR and IIR filters in MATLAB and Julia to analyze
+          frequency-domain behavior of audio signals. Explored windowing methods and
+          compared magnitude/phase responses across filter types.
+        </p>
+        <div class="card-meta">
+          <span class="tag">MATLAB</span>
+          <span class="tag">Julia</span>
+          <span class="tag">EE 102A</span>
+        </div>
+        <a href="#" class="btn btn-sm">View Project &rarr;</a>
+      </div>
+    </article>
+
+    <!-- ── ADD MORE PROJECT CARDS BELOW ── -->
+
+    <article class="card">
+      <div class="card-img-wrap">
+        <img src="assets/placeholder.png" alt="Project image" class="card-img" />
+        <span class="card-tag">Systems</span>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">Your Next Project</h2>
+        <p class="card-desc">
+          Replace this description with a concise summary of what the project does,
+          the problem it solves, and the tools or techniques you used.
+        </p>
+        <div class="card-meta">
+          <span class="tag">C</span>
+          <span class="tag">Assembly</span>
+        </div>
+        <a href="#" class="btn btn-sm">View Project &rarr;</a>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 James Ajanel &middot; Stanford University</p>
+    <div class="footer-links">
+      <a href="https://github.com/James2035-bill" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:your@email.com">Email</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>
