@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AC-DC Full Wave Converter | James Ajanel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">James Ajanel</a>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <header class="page-header container">
+    <h1>AC &ndash; DC Full Wave Converter</h1>
+    <p class="page-sub">EE 101A &mdash; Circuits I &middot; Fall Quarter, Sophomore Year</p>
+  </header>
+
+  <!-- ===== PROJECT CONTENT ===== -->
+  <main class="container project-page">
+
+    <a href="projects.html" class="project-back">&larr; Back to Projects</a>
+
+    <!-- Intro -->
+    <section class="project-section">
+      <p>
+        In my EE 101A Circuits I class that I took in the Fall Quarter of my sophomore year,
+        I gained exposure to basic circuitry as well as a deep understanding of the electrical
+        components that I would use in my circuits &mdash; such as Capacitors, Diodes, and Transistors
+        &mdash; to help achieve our end goal of rectifying a 120 V AC input to a 20 V DC output,
+        usable for everyday consumer products such as charging one's phone. You can think of this
+        AC &ndash; DC full wave converter as acting similar to the charging brick that helps regulate
+        the voltage that is appropriate for your items.
+      </p>
+    </section>
+
+    <!-- Section 1: AC Input -->
+    <section class="project-section">
+      <h2>The AC Input</h2>
+      <p>
+        Below is an image of our AC input, measured using an oscilloscope, prior to building
+        our AC-DC converter.
+      </p>
+      <img src="assets/acdc-1.jpg" alt="Oscilloscope reading of AC input waveform" class="project-img" />
+    </section>
+
+    <!-- Section 2: Full-Wave Rectifier -->
+    <section class="project-section">
+      <h2>Building the Full-Wave Rectifier</h2>
+      <p>
+        In building our AC-DC converter, we started off by soldering four diodes to form a
+        full-wave rectifier. The diodes work in pairs to ensure that our voltage output remains
+        positive, no matter how our AC voltage behaves.
+      </p>
+      <p>
+        When our AC voltage is in its positive half cycle, one pair of diodes allows current to
+        flow through to the output. When it changes to its negative half cycle, the first pair
+        turns off and another pair turns on, switching the direction of the current so that our
+        voltage output remains positive.
+      </p>
+      <p>
+        For reference, negative voltage doesn't mean that we're losing voltage &mdash; it simply
+        represents the change in direction of current flow. Diodes are arranged in a way that
+        turns any AC wave into a positive DC waveform.
+      </p>
+    </section>
+
+    <!-- Section 3: Capacitor -->
+    <section class="project-section">
+      <h2>Smoothing with a Capacitor</h2>
+      <p>
+        However, our DC voltage is still unstable &mdash; we want a steady voltage. We then include
+        a capacitor to create the waveform as measured on the oscilloscope below.
+      </p>
+      <img src="assets/acdc-2.jpg" alt="Oscilloscope showing ripple effect after adding capacitor" class="project-img" />
+      <p>
+        By adding a capacitor in parallel with our voltage output, we no longer see full waves at
+        the output. Instead, we notice a ripple effect created by the capacitor at the end of the
+        circuit. The capacitor's electrical property of resisting sudden changes in voltage helps
+        smooth out the waveform, giving us a more constant DC output. We then add a resistor
+        connected to the positive node of the capacitor to help discharge any stored energy the
+        capacitor retains over time.
+      </p>
+    </section>
+
+    <!-- Section 4: Zener, Potentiometer & Transistor -->
+    <section class="project-section">
+      <h2>Regulating the Output</h2>
+      <p>
+        To reduce the ripple waves and make our DC voltage constant, we added a Zener diode.
+        The Zener diode steps down the voltage by clamping it to a fixed voltage specified in
+        its datasheet, keeping the output voltage around that level.
+      </p>
+      <p>
+        We then add a potentiometer in parallel with the Zener diode to add some variability,
+        allowing us to adjust the output voltage to meet our specific needs.
+      </p>
+      <p>
+        The last part of the lab is to add a transistor at the end of our circuit, where it
+        serves as a voltage buffer. At the gate of the transistor, the Zener diode and
+        potentiometer set a reference for what the output voltage should be. The transistor
+        then adjusts the current it delivers so that the output voltage closely matches this
+        reference &mdash; keeping the DC output nearly constant, even when the load resistance
+        becomes heavier.
+      </p>
+      <img src="assets/acdc-3.jpg" alt="Final circuit with Zener diode, potentiometer, and transistor" class="project-img" />
+      <p>
+        We then add two other electrical components to the source of our transistor to remove
+        any leftover AC ripple that may have passed through. The resistor in parallel ensures
+        that the capacitor is properly discharging its stored energy, helping maintain a
+        steady DC output.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 James Ajanel &middot; Stanford University</p>
+    <div class="footer-links">
+      <a href="https://github.com/James2035-bill" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:jamesajanel7@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/james-ajanel-748917280" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>
 
