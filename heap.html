@@ -44,43 +44,32 @@
     <!-- Intro -->
     <section class="project-section">
       <p>
-        <!-- Write your own introduction here -->
+        In the final assignment of CS 107, I implemented two heap allocators &mdash;
+        implicit and explicit.
       </p>
     </section>
 
-    <!-- Section 1 -->
+    <!-- Section 1: Implicit Allocator -->
     <section class="project-section">
-      <h2><!-- Section title --></h2>
+      <h2>Implicit Allocator</h2>
       <p>
-        <!-- Your explanation here -->
+        The <strong>implicit allocator</strong> traverses every node in the heap to find
+        free blocks, resulting in an O(n) <code>mymalloc</code> and O(n) <code>realloc</code>,
+        with <code>free</code> running in O(1). Simple to implement, but inefficient at scale.
       </p>
     </section>
 
-    <!-- Section 2 -->
+    <!-- Section 2: Explicit Allocator -->
     <section class="project-section">
-      <h2><!-- Section title --></h2>
+      <h2>Explicit Allocator</h2>
       <p>
-        <!-- Your explanation here -->
+        The <strong>explicit allocator</strong> improves on this by maintaining a doubly linked
+        list of only free nodes, so <code>mymalloc</code> skips allocated blocks entirely &mdash;
+        reducing search time significantly. <code>realloc</code> also supports in-place
+        reallocation by checking whether neighboring free nodes can be absorbed to satisfy
+        the request. <code>free</code> remains O(1).
       </p>
     </section>
-
-    <!-- Section 3 -->
-    <section class="project-section">
-      <h2><!-- Section title --></h2>
-      <p>
-        <!-- Your explanation here -->
-      </p>
-    </section>
-
-    <!-- Section 4 -->
-    <section class="project-section">
-      <h2><!-- Section title --></h2>
-      <p>
-        <!-- Your explanation here -->
-      </p>
-    </section>
-
-    <!-- Add or remove sections as needed -->
 
   </main>
 
